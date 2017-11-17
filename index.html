@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Supplier Hierarchy In Technology</title>
+    <link rel="stylesheet" type="text/css" href="styles/inline.css">
+
+    <!-- TODO add manifest here -->
+    <link rel="manifest" href="/manifest.json">
+    <!-- Add to home screen for Safari on iOS -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="Supplier Hierarchy In Technology">
+    <link rel="apple-touch-icon" href="images/icons/TransportIcon.png">
+    <meta name="msapplication-TileImage" content="images/icons/TransportIcon.png">
+    <meta name="msapplication-TileColor" content="#2F3BA2">
+</head>
+<body>
+
+<header class="header">
+    <h1 class="header__title">Supplier Hierarchy In Technology</h1>
+    <div class="dialog-buttons">
+        <button id="butSuppliers" class="dialog-buttons" aria-label="Suppliers">Suppliers</button>
+        <button id="butAdd" class="dialog-buttons" aria-label="Add">Add</button>
+    </div>
+
+</header>
+
+<main class="main">
+    <div class="card cardTemplate alert-card" hidden>
+        <div class="city-key" hidden></div>
+        <div class="card-last-updated" hidden></div>
+        <div class="supplierName"></div>
+        <div class="chain"></div>
+        <div class="business-type"></div>
+        <div class="current">
+            <div class="visual">
+                <div class="icon"></div>
+                <!--<div class="temperature">-->
+                <!--<span class="value"></span><span class="scale">°F</span>-->
+                <!--</div>-->
+            </div>
+            <div class="description">
+                <div class="supplier-type"></div>
+                <div class="supplier-status"></div>
+                <div class="department-type"></div>
+                <div class="street-address"></div>
+                <div class="street-address2"></div>
+            </div>
+            <div class="description">
+                <div class="city"></div>
+                <div class="governing-district"></div>
+                <div class="postal-code"></div>
+                <div class="operating-region"></div>
+            </div>
+        </div>
+    </div>
+</main>
+
+<div class="dialog-container">
+    <div class="dialog">
+        <div class="dialog-title">Add New Supplier</div>
+        <div class="dialog-body">
+            <form>
+                <fieldset>
+                    <label for="newSupplierName">Name</label>
+                    <input id="newSupplierName" type="text"/><br>
+                    <label for="newSupplierParent">Parent</label>
+                    <input id="newSupplierParent" type="text"/><br>
+                    <label for="newSupplierBusinessType">Business Type</label>
+                    <input id="newSupplierBusinessType" type="text"/><br>
+                    <label for="newSupplierChain">Chain</label>
+                    <input id="newSupplierChain" type="text"/><br>
+                    <label for="newSupplierType">Supplier Type</label>
+                    <input id="newSupplierType" type="text"/><br>
+                    <label for="newSupplierDepartment">Department</label>
+                    <input id="newSupplierDepartment" type="text"/><br>
+                    <label for="newSupplierStatus">Status</label>
+                    <input id="newSupplierStatus" type="text"/><br>
+                    <label for="newSupplierAddress">Address</label>
+                    <input id="newSupplierAddress" type="text"/><br>
+                    <label for="newSupplierAddress2">Address 2</label>
+                    <input id="newSupplierAddress2" type="text"/><br>
+                    <label for="newSupplierCity">City</label>
+                    <input id="newSupplierCity" type="text"/><br>
+                    <label for="newSupplierGovDist">Governing District</label>
+                    <input id="newSupplierGovDist" type="text"/><br>
+                    <label for="newSupplierPostalCode">Postal Code</label>
+                    <input id="newSupplierPostalCode" type="text"/><br>
+                    <label for="newSupplierRegion">Region</label>
+                    <input id="newSupplierRegion" type="text"/><br>
+                    <label for="newSupplierPhone">Phone</label>
+                    <input id="newSupplierPhone" type="text"/><br>
+                    <label for="newSupplierEmail">Email</label>
+                    <input id="newSupplierEmail" type="text"/><br>
+                    <label for="newSupplierFax">Fax</label>
+                    <input id="newSupplierFax" type="text"/><br>
+                    <label for="newSupplierWeb">Web URL</label>
+                    <input id="newSupplierWeb" type="text"/><br>
+                    <label for="newSupplierBillingCurrency">Billing Currency</label>
+                    <input id="newSupplierBillingCurrency" type="text"/><br>
+                    <label for="newSupplierProjectMarkup">Project Markup</label>
+                    <input id="newSupplierProjectMarkup" type="text"/><br>
+                    <label for="newSupplierClientCommission">ClientCommission</label>
+                    <input id="newSupplierClientCommission" type="text"/><br>
+                    <label for="newSupplierClientCommission">Financial Sytems</label>
+                    <fieldset>
+                        <select id="newSupplierFinancialSytems">
+                            <option value="2357536">Oracle</option>
+                            <option value="2367105">SAP</option>
+                            <option value="2379574">Intacct</option>
+                            <option value="2459115">MS Dynamics GP</option>
+                            <option value="2475687">Sage 3000</option>
+                            <option value="2487956">Open Systems</option>
+                        </select><br>
+                    </fieldset>
+                        <label for="newSupplierContacts">Contacts</label>
+                    <fieldset>
+                        <select id="newSupplierContacts">
+                            <option value="2357536">Joe Marriott</option>
+                            <option value="2367105">Boston, MA</option>
+                            <option value="2379574">Chicago, IL</option>
+                            <option value="2459115">New York, NY</option>
+                            <option value="2475687">Portland, OR</option>
+                            <option value="2487956">San Francisco, CA</option>
+                            <option value="2490383">Seattle, WA</option>
+                        </select>
+                    </fieldset>
+                </fieldset>
+            </form>
+        </div>
+        <div class="dialog-buttons">
+            <button id="butAddSupplier" class="button">Add</button>
+            <button id="butAddCancel" class="button">Cancel</button>
+        </div>
+    </div>
+</div>
+
+<div class="loader">
+    <svg viewBox="0 0 32 32" width="32" height="32">
+        <circle id="spinner" cx="16" cy="16" r="14" fill="none"></circle>
+    </svg>
+</div>
+
+<!-- Uncomment the line below when ready to test with fake data -->
+<script src="scripts/app.js" async></script>
+
+</body>
+</html>
